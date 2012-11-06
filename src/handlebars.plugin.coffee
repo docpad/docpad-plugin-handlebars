@@ -22,6 +22,11 @@ module.exports = (BasePlugin) ->
 				for own name,helper of @config.helpers
 					handlebars.registerHelper(name, helper)
 
+			# Add partials, if defined in docpad.cson
+			if @config.partials
+					for own name,partial of @config.partials
+						handlebars.registerPartial(name, partial)
+
 		# Render some content
 		render: (opts) ->
 			# Prepare
