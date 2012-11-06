@@ -11,7 +11,28 @@ npm install --save docpad-plugin-handlebars
 ```
 
 
+## Usage
+
+The plugin also supports helpers and partials. They can be defined in the docpad settings.
+
+Here is a small example:
+
+    {
+      plugins:
+        handlebars:
+          helpers:
+            # Expose docpads 'getBlock' function to handlebars
+            getBlock: (type, additional...) ->
+              additional.pop() # remove the hash object
+              @getBlock(type).add(additional).toHTML()
+          partials:
+            title: '<h1>{{document.title}}</h1>'
+            goUp: '<a href="#">Scroll up</a>'
+    }
+
+
 ## History
+
 You can discover the history inside the `History.md` file
 
 
