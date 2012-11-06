@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-handlebars",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"description": "Adds support for the Handlebars templating engine to DocPad.",
 	"homepage": "http://docpad.org/plugin/handlebars",
 	"keywords": [
@@ -19,7 +19,8 @@
 	],
 	"contributors": [
 		"Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
+		"Tobias Birmili <birmili@mecodia.de> (http://mecodia.de)"
 	],
 	"bugs": {
 		"url": "https://github.com/bevry/docpad-extras/issues"
