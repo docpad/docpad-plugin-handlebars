@@ -1,6 +1,6 @@
 ## History
 
-- v2.1.0 November 6, 2012
+- v2.1.0 November 17, 2012
 	- Added support for partials
 
 - v2.0.1 August 10, 2012
