@@ -1,6 +1,6 @@
 ## History
 
-- v2.2.0 January 19, 2012
+- v2.2.0 January 19, 2013
 	- Added support for precompiling
 		- Closes [pull request #3](https://github.com/docpad/docpad-plugin-handlebars/pull/3) thanks to [Gilles Bouthenot](https://github.com/gbouthenot)
 
