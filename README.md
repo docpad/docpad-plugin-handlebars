@@ -11,54 +11,70 @@ npm install --save docpad-plugin-handlebars
 ```
 
 
-## Usage
+## Configuration
 
-The plugin also supports helpers and partials. They can be defined in the docpad settings.
+### Getting helpers and partials to work
 
-Here is a small example:
+For the plugin to support helpers and partials, you'll have to add something like the following to your [docpad configuration file](http://docpad.org/docs/config) manually:
 
-    {
-      plugins:
-        handlebars:
-          helpers:
-            # Expose docpads 'getBlock' function to handlebars
-            getBlock: (type, additional...) ->
-              additional.pop() # remove the hash object
-              @getBlock(type).add(additional).toHTML()
-          partials:
-            title: '<h1>{{document.title}}</h1>'
-            goUp: '<a href="#">Scroll up</a>'
-    }
+``` coffee
+# ...
+plugins:
+	handlebars:
+		helpers:
+			# Expose docpads 'getBlock' function to handlebars
+			getBlock: (type, additional...) ->
+				additional.pop() # remove the hash object
+				@getBlock(type).add(additional).toHTML()
+		partials:
+			title: '<h1>{{document.title}}</h1>'
+			goUp: '<a href="#">Scroll up</a>'
+# ...
+```
 
 
 ## Usage as precompiler
 
-If the document extension is `.inlinejs|js.handlebars|hbs|hb`, the plugin will produce a precompiled template.
-In that, case, you can customise the ouput in the docpad settings:
+If the document extension is `.inlinejs|js.handlebars|hbs|hb`, the plugin will produce a precompiled template. In this case, you can customise the precompiled template via the following:
 
-    {
-        precompileOpts:
-            wrapper: "default"
-                # wrapper should be "default", "amd" or "none" (please note that "none" is probably not what you want
-                # "none": This option produces non-uglifable, so use "*.inlinejs.handlebars" extension
-                #     function (Handlebars,depth0,helpers,partials,data) {
-                #         ...
-                #     }
-                # "default" :
-                #     (function() {
-                #         var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-                #         templates['test'] = template(function (Handlebars,depth0,helpers,partials,data) {
-                #             ...
-                #         })
-                #     })();
-                # "amd":
-                #     define(['handlebars'], function(Handlebars) {
-                #         var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-                #         templates['test'] = template(function (Handlebars,depth0,helpers,partials,data) {
-                #             ...
-                #         });
-                #     });
-    }
+``` coffee
+# ...
+plugins:
+	handlebars:
+		precompileOpts:
+			wrapper: "default"
+# ...
+```
+
+Available values for the wrapper option are:
+
+- `"default"`: Produces a handlebars wrapper like:
+	``` javascript
+	(function() {
+		var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+		templates['theSlugOfTheFile'] = template(function (Handlebars,depth0,helpers,partials,data) {
+			...
+		})
+	})();
+	```
+
+- `"amd"`: Produces a AMD handlebars wrapper like:
+	``` javascript
+	define(['handlebars'], function(Handlebars) {
+		var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+		templates['theSlugOfTheFile'] = template(function (Handlebars,depth0,helpers,partials,data) {
+			...
+		});
+	});
+	```
+
+- `"none"`:  Produces a basic wrapper like:
+	``` javascript
+	function (Handlebars,depth0,helpers,partials,data) {
+		...
+	}
+	```
+
 
 
 ## History

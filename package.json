@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-handlebars",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "Adds support for the Handlebars templating engine to DocPad.",
 	"homepage": "http://docpad.org/plugin/handlebars",
 	"keywords": [
@@ -20,23 +20,24 @@
 	"contributors": [
 		"Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
 		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-		"Tobias Birmili <birmili@mecodia.de> (http://mecodia.de)"
+		"Tobias Birmili <birmili@mecodia.de> (http://mecodia.de)",
+		"Gilles Bouthenot (https://github.com/gbouthenot)"
 	],
 	"bugs": {
-		"url": "https://github.com/bevry/docpad-extras/issues"
+		"url": "http://docpad.org/plugin/handlebars/issues"
 	},
 	"repository" : {
 		"type": "git",
-		"url": "http://github.com/bevry/docpad-extras.git"
+		"url": "https://github.com/docpad/docpad-plugin-handlebars.git"
 	},
 	"dependencies": {
-		"handlebars": "1.0.x"
+		"handlebars": "~1.0.7"
 	},
 	"devDependencies": {
-		"coffee-script": "1.4.x"
+		"coffee-script": "~1.4.0"
 	},
 	"engines" : {
-		"node": ">=0.4.0",
+		"node": ">=0.4",
 		"docpad": "6.x"
 	},
 	"main": "./out/handlebars.plugin.js",
