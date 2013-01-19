@@ -17,6 +17,7 @@ module.exports = (BasePlugin) ->
 			config = @config
 			handlebars = @handlebars = require('handlebars')
 
+			@precompileOpts = @config.precompileOpts || {}
 			# Add helpers, if defined in docpad.cson
 			if @config.helpers
 				for own name,helper of @config.helpers
@@ -30,8 +31,36 @@ module.exports = (BasePlugin) ->
 		# Render some content
 		render: (opts) ->
 			# Prepare
-			{inExtension,templateData,content} = opts
+			{inExtension,outExtension,templateData,content} = opts
 			handlebars = @handlebars
 
 			if inExtension in ['hb', 'hbs', 'handlebars']
-				opts.content = handlebars.compile(opts.content)(templateData)
+				if outExtension in ['js', 'inlinejs']
+					output = @handlePrecompileOpts(opts)
+				else
+					output = handlebars.compile(opts.content)(templateData)
+				opts.content = output
+
+		handlePrecompileOpts: (opts) ->
+			argv = @precompileOpts
+			argv.wrapper ?= "default"
+			argv.amdPath ?= ""
+
+			pre = post = "";
+			# slug for {src}/tpl/a/abc/test.js.handlebars is "tpl-a-abc-test"
+			templateName = opts.file.attributes.slug;
+			if (argv.wrapper is "amd")
+				pre += 'define([\'' + argv.amdPath + 'handlebars\'], function(Handlebars) {\n'
+			if (argv.wrapper is "default")
+				pre += '(function() {\n'
+			if (argv.wrapper in [ "default", "amd" ])
+				pre += '  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};\n'
+				pre += 'templates[\'' + templateName + '\'] = template('
+				post += ');\n'
+
+			if (argv.wrapper is "amd")
+				post += '});'
+			if (argv.wrapper is "default")
+				post += '})();'
+
+			return pre + @handlebars.precompile(opts.content) + post
