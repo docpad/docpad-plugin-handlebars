@@ -14,13 +14,13 @@
 	],
 	"author": "Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
 	"maintainers": [
-		"Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+		"Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
 	],
 	"contributors": [
-		"Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-		"Tobias Birmili <birmili@mecodia.de> (http://mecodia.de)",
+		"Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+		"Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)",
 		"Gilles Bouthenot (https://github.com/gbouthenot)"
 	],
 	"bugs": {
