@@ -1,5 +1,10 @@
 ## History
 
+- v2.2.1 March 7, 2013
+	- Repackaged
+	- Dependency upgrades
+		-  `haml` from ~1.0.8 to ~1.0.10
+
 - v2.2.0 January 19, 2013
 	- Added support for precompiling
 		- Closes [pull request #3](https://github.com/docpad/docpad-plugin-handlebars/pull/3) thanks to [Gilles Bouthenot](https://github.com/gbouthenot)
