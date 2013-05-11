@@ -35,7 +35,7 @@ plugins:
 
 ## Usage as precompiler
 
-If the document extension is `.inlinejs|js.handlebars|hbs|hb`, the plugin will produce a precompiled template. In this case, you can customise the precompiled template via the following:
+If the document extension is `.(inlinejs|js).(handlebars|hbs|hb)`, the plugin will produce a precompiled template. In this case, you can customise the precompiled template via the following:
 
 ``` coffee
 # ...
