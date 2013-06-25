@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-handlebars",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"description": "Adds support for the Handlebars templating engine to DocPad.",
 	"homepage": "http://docpad.org/plugin/handlebars",
 	"keywords": [
@@ -31,10 +31,11 @@
 		"url": "https://github.com/docpad/docpad-plugin-handlebars.git"
 	},
 	"dependencies": {
-		"handlebars": "~1.0.10"
+		"handlebars": "~1.0.12"
 	},
 	"devDependencies": {
-		"coffee-script": "~1.4.0"
+		"coffee-script": "~1.6.2",
+		"docpad": ">=6.37 <7"
 	},
 	"engines" : {
 		"node": ">=0.4",
