@@ -1,48 +1,50 @@
 {
-	"name": "docpad-plugin-handlebars",
-	"version": "2.2.2",
-	"description": "Adds support for the Handlebars templating engine to DocPad.",
-	"homepage": "http://docpad.org/plugin/handlebars",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"handlebars",
-		"templating",
-		"templates",
-		"render",
-		"rendering"
-	],
-	"author": "Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
-	"maintainers": [
-		"Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"contributors": [
-		"Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
-		"Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)",
-		"Gilles Bouthenot (https://github.com/gbouthenot)"
-	],
-	"bugs": {
-		"url": "http://docpad.org/plugin/handlebars/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/docpad/docpad-plugin-handlebars.git"
-	},
-	"dependencies": {
-		"handlebars": "~1.0.12"
-	},
-	"devDependencies": {
-		"coffee-script": "~1.6.2",
-		"docpad": ">=6.37 <7"
-	},
-	"engines" : {
-		"node": ">=0.4",
-		"docpad": "6.x"
-	},
-	"main": "./out/handlebars.plugin.js",
-	"scripts": {
-		"test": "node ./out/handlebars.test.js"
-	}
+  "name": "docpad-plugin-handlebars",
+  "version": "2.2.2",
+  "description": "Adds support for the Handlebars templating engine to DocPad.",
+  "homepage": "http://docpad.org/plugin/handlebars",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "handlebars",
+    "templating",
+    "templates",
+    "render",
+    "rendering"
+  ],
+  "author": "Mike Moulton <mike@meltmedia.com> (http://meltmedia.com)",
+  "maintainers": [
+    "Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)",
+    "Gilles Bouthenot (https://github.com/gbouthenot)"
+  ],
+  "bugs": {
+    "url": "http://docpad.org/plugin/handlebars/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docpad/docpad-plugin-handlebars.git"
+  },
+  "dependencies": {
+    "handlebars": "~1.0.12"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2"
+  },
+  "engines": {
+    "node": ">=0.4",
+    "docpad": "6.x"
+  },
+  "main": "./out/handlebars.plugin.js",
+  "scripts": {
+    "test": "node ./out/handlebars.test.js"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  }
 }
