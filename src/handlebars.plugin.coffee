@@ -18,6 +18,7 @@ module.exports = (BasePlugin) ->
 			handlebars = @handlebars = require('handlebars')
 
 			@precompileOpts = @config.precompileOpts || {}
+
 			# Add helpers, if defined in docpad.cson
 			if @config.helpers
 				for own name,helper of @config.helpers
@@ -47,6 +48,7 @@ module.exports = (BasePlugin) ->
 			argv.amdPath ?= ""
 
 			pre = post = "";
+			
 			# slug for {src}/tpl/a/abc/test.js.handlebars is "tpl-a-abc-test"
 			templateName = opts.file.attributes.slug;
 			if (argv.wrapper is "amd")

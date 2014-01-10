@@ -1,13 +1,16 @@
-## History
+# History
+
+- v2.3.0 January 10, 2014
+	- Repackaged
+	- Updated dependencies
 
 - v2.2.2 June 26, 2013
 	- Repackaged
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.2.1 March 7, 2013
 	- Repackaged
-	- Dependency upgrades
-		-  `haml` from ~1.0.8 to ~1.0.10
+	- Updated dependencies
 
 - v2.2.0 January 19, 2013
 	- Added support for precompiling
