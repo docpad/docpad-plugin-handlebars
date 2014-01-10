@@ -21,8 +21,8 @@ Convention:  `.(inlinejs|js|anything).(handlebars|hbs|hb)`
 
 ## Install
 
-```
-npm install --save docpad-plugin-handlebars
+``` bash
+docpad install handlebars
 ```
 
 
