@@ -7,4 +7,7 @@
 			partials:
 				partial1: '<h1>{{document.example}}</h1>'
 				partial2: '<a href="#">Scroll up</a>'
+
+	# Increase the render passes so that the include helper works.
+	renderPasses: 2
 }

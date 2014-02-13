@@ -1,29 +1,29 @@
 <h1>Standard Template Helpers</h1>
 
-<h2>include(relativePath)</h2>
+<h2>include "handlebars-helper.html.hbs"</h2>
 
-{{{include handlebars.html.hbs}}}
+{{{include "handlebars-helper.html.hbs"}}}
 
 
-<h2>getEnvironment()</h2>
+<h2>getEnvironment</h2>
 
 {{getEnvironment}}
 
 
-<h2>getEnvironments()</h2>
+<h2>getEnvironments</h2>
 
 {{#each getEnvironments}}
 	{{this}}
 {{/each}}
 
 
-<h2>getBlock(blockname)s</h2>
+<h2>getBlock blockname</h2>
 
 {{{getBlock "scripts"}}}
 {{{getBlock "styles"}}}
 {{{getBlock "meta"}}}
 
 
-<h2>getPath(path,parentPath)</h2>
+<h2>getPath "handlebars-helper.html" "test"</h2>
 
 {{getPath "handlebars-helper.html" "test"}}
