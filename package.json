@@ -21,6 +21,7 @@
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
     "Gilles Bouthenot (https://github.com/gbouthenot)",
     "Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
+    "RobLoach (https://github.com/RobLoach)",
     "Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)"
   ],
   "bugs": {
@@ -36,7 +37,7 @@
   "devDependencies": {
     "coffee-script": "~1.7.1",
     "docpad": "6",
-    "projectz": "~0.3.10"
+    "projectz": "~0.3.13"
   },
   "engines": {
     "node": ">=0.4"
@@ -61,5 +62,8 @@
   },
   "license": {
     "type": "MIT"
+  },
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
   }
 }

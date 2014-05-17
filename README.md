@@ -137,6 +137,7 @@ These amazing people have contributed code to this project:
 - [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=balupton)
 - [Gilles Bouthenot](https://github.com/gbouthenot) — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=gbouthenot)
 - [Mike Moulton](https://github.com/mmoulton) <mike@meltmedia.com> — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=mmoulton)
+- [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=RobLoach)
 - [Tobias Birmili](https://github.com/toabi) <birmili@mecodia.de> — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=toabi)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-handlebars/blob/master/CONTRIBUTING.md#files)
