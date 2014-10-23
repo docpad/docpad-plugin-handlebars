@@ -1,3 +1,6 @@
+fs = require('safefs')
+path = require('path')
+
 module.exports = (BasePlugin) ->
 
 	# Define Plugin
@@ -66,3 +69,17 @@ module.exports = (BasePlugin) ->
 				post += '})();'
 
 			return pre + @handlebars.precompile(opts.content) + post
+
+		generateBefore: (opts, next) ->
+			partialsDir = @config.partialsDir
+			handlebars = @handlebars
+			docpad = @docpad
+			if partialsDir
+				fs.readdir partialsDir, (err, files) ->
+					return docpad.error(err) if err
+
+					for fileName in files
+						filePath = path.join(partialsDir, fileName)
+						partial = fs.readFileSync filePath, 'utf8'
+						handlebars.registerPartial(fileName.split('.')[0], partial)
+					next()
