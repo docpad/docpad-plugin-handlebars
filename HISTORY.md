@@ -3,6 +3,7 @@
 - v2.4.x
 	- Updated dependencies
 		- coffee-script 1.6.3 to 1.7.1
+	- Added support for partials directory
 
 - v2.3.0 January 10, 2014
 	- Repackaged

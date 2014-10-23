@@ -42,6 +42,7 @@ plugins:
 			getBlock: (type, additional...) ->
 				additional.pop() # remove the hash object
 				@getBlock(type).add(additional).toHTML()
+		partialsDir: './src/layouts/partials'
 		partials:
 			title: '<h1>{{document.title}}</h1>'
 			goUp: '<a href="#">Scroll up</a>'
@@ -139,6 +140,7 @@ These amazing people have contributed code to this project:
 - [Mike Moulton](https://github.com/mmoulton) <mike@meltmedia.com> — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=mmoulton)
 - [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=RobLoach)
 - [Tobias Birmili](https://github.com/toabi) <birmili@mecodia.de> — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=toabi)
+- [Michael Barlock](https://github.com/mbarlock) — [view contributions](https://github.com/docpad/docpad-plugin-handlebars/commits?author=mbarlock)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-handlebars/blob/master/CONTRIBUTING.md#files)
 
