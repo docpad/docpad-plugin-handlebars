@@ -1,4 +1,5 @@
 fs = require('safefs')
+wrench = require('wrench')
 path = require('path')
 
 module.exports = (BasePlugin) ->
@@ -75,11 +76,12 @@ module.exports = (BasePlugin) ->
 			handlebars = @handlebars
 			docpad = @docpad
 			if partialsDir
-				fs.readdir partialsDir, (err, files) ->
+				wrench.readdirRecursive partialsDir, (err, files) ->
 					return docpad.error(err) if err
 
-					for fileName in files
-						filePath = path.join(partialsDir, fileName)
-						partial = fs.readFileSync filePath, 'utf8'
-						handlebars.registerPartial(fileName.split('.')[0], partial)
+
+					for fileName in files when fileName.match /(hb|hbs|handlebars)$/
+              filePath = path.join(partialsDir, fileName)
+              partial = fs.readFileSync filePath, 'utf8'
+              handlebars.registerPartial(fileName.split('.')[0], partial)
 					next()

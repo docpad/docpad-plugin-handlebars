@@ -22,7 +22,8 @@
     "Gilles Bouthenot (https://github.com/gbouthenot)",
     "Mike Moulton <mike@meltmedia.com> (https://github.com/mmoulton)",
     "RobLoach (https://github.com/RobLoach)",
-    "Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)"
+    "Tobias Birmili <birmili@mecodia.de> (https://github.com/toabi)",
+    "Michael Barlock (https://github.com/mbarlock)"
   ],
   "bugs": {
     "url": "https://github.com/docpad/docpad-plugin-handlebars/issues"
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "handlebars": "~2.0.0",
+    "wrench": "~1.5.8",
     "safefs": "~3.1.1"
   },
   "devDependencies": {
