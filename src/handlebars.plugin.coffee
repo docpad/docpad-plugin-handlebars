@@ -79,9 +79,8 @@ module.exports = (BasePlugin) ->
 				wrench.readdirRecursive partialsDir, (err, files) ->
 					return docpad.error(err) if err
 
-
 					for fileName in files when fileName.match /(hb|hbs|handlebars)$/
-              filePath = path.join(partialsDir, fileName)
-              partial = fs.readFileSync filePath, 'utf8'
-              handlebars.registerPartial(fileName.split('.')[0], partial)
+						filePath = path.join(partialsDir, fileName)
+						partial = fs.readFileSync filePath, 'utf8'
+						handlebars.registerPartial(fileName.split('.')[0], partial)
 					next()
