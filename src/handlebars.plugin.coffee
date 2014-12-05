@@ -1,3 +1,7 @@
+fs = require('safefs')
+wrench = require('wrench')
+path = require('path')
+
 module.exports = (BasePlugin) ->
 
 	# Define Plugin
@@ -48,7 +52,7 @@ module.exports = (BasePlugin) ->
 			argv.amdPath ?= ""
 
 			pre = post = "";
-			
+
 			# slug for {src}/tpl/a/abc/test.js.handlebars is "tpl-a-abc-test"
 			templateName = opts.file.attributes.slug;
 			if (argv.wrapper is "amd")
@@ -66,3 +70,17 @@ module.exports = (BasePlugin) ->
 				post += '})();'
 
 			return pre + @handlebars.precompile(opts.content) + post
+
+		generateBefore: (opts, next) ->
+			partialsDir = @config.partialsDir
+			handlebars = @handlebars
+			docpad = @docpad
+			if partialsDir
+				wrench.readdirRecursive partialsDir, (err, files) ->
+					return docpad.error(err) if err
+
+					for fileName in files when fileName.match /(hb|hbs|handlebars)$/
+						filePath = path.join(partialsDir, fileName).replace(path.sep, '/')
+						partial = fs.readFileSync filePath, 'utf8'
+						handlebars.registerPartial(fileName.split('.')[0], partial)
+					next()

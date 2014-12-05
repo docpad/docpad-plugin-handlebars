@@ -42,6 +42,7 @@ plugins:
 			getBlock: (type, additional...) ->
 				additional.pop() # remove the hash object
 				@getBlock(type).add(additional).toHTML()
+		partialsDir: './src/layouts/partials'
 		partials:
 			title: '<h1>{{document.title}}</h1>'
 			goUp: '<a href="#">Scroll up</a>'
