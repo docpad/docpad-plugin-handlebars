@@ -15,19 +15,26 @@ module.exports = (BasePlugin) ->
 			super
 			docpad = @docpad
 			config = @config
-			handlebars = @handlebars = require('handlebars')
+			@handlebars = require('handlebars')
 
 			@precompileOpts = @config.precompileOpts || {}
+
+		# Generate Before
+		generateBefore: ->
+			# Add the template helper as a Handlebars helper
+			for own key,value of @docpad.getTemplateData()
+				if Object::toString.call(value) is '[object Function]'
+					@handlebars.registerHelper(key, value)
 
 			# Add helpers, if defined in docpad.cson
 			if @config.helpers
 				for own name,helper of @config.helpers
-					handlebars.registerHelper(name, helper)
+					@handlebars.registerHelper(name, helper)
 
 			# Add partials, if defined in docpad.cson
 			if @config.partials
 					for own name,partial of @config.partials
-						handlebars.registerPartial(name, partial)
+						@handlebars.registerPartial(name, partial)
 
 		# Render some content
 		render: (opts) ->
@@ -48,7 +55,7 @@ module.exports = (BasePlugin) ->
 			argv.amdPath ?= ""
 
 			pre = post = "";
-			
+
 			# slug for {src}/tpl/a/abc/test.js.handlebars is "tpl-a-abc-test"
 			templateName = opts.file.attributes.slug;
 			if (argv.wrapper is "amd")
