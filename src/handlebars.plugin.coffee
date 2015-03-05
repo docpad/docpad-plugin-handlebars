@@ -26,8 +26,8 @@ module.exports = (BasePlugin) ->
 
 			# Add partials, if defined in docpad.cson
 			if @config.partials
-					for own name,partial of @config.partials
-						handlebars.registerPartial(name, partial)
+				for own name,partial of @config.partials
+					handlebars.registerPartial(name, partial)
 
 		# Render some content
 		render: (opts) ->
@@ -48,9 +48,9 @@ module.exports = (BasePlugin) ->
 			argv.amdPath ?= ""
 
 			pre = post = "";
-			
+
 			# slug for {src}/tpl/a/abc/test.js.handlebars is "tpl-a-abc-test"
-			templateName = opts.file.attributes.slug;
+			templateName = opts.file.attributes.slug
 			if (argv.wrapper is "amd")
 				pre += 'define([\'' + argv.amdPath + 'handlebars\'], function(Handlebars) {\n'
 			if (argv.wrapper is "default")
