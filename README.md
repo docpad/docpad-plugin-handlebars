@@ -49,7 +49,12 @@ plugins:
 # ...
 ```
 
-
+In your handlebars template you will need to use {{{content}}} to prevent handlebars from escaping any html content. You also cannot use helper functions as a parameter to {{#each collection}}, instead you should define a templateData variable and map the name to a @getCollection call e:g:
+```
+    sitePages: ->
+      @getCollection("pages").toJSON()
+```
+      
 ## Usage as precompiler
 
 If the document extension is `.(inlinejs|js).(handlebars|hbs|hb)`, the plugin will produce a precompiled template. In this case, you can customise the precompiled template via the following:
