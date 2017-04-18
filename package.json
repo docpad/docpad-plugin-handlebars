@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-handlebars",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Adds support for the Handlebars templating engine to DocPad.",
   "homepage": "https://github.com/docpad/docpad-plugin-handlebars",
   "license": "MIT",

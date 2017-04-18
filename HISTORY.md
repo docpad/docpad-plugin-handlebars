@@ -1,8 +1,7 @@
 # History
 
-## v2.4.x
-- Updated dependencies
-	- coffee-script 1.6.3 to 1.7.1
+## v2.4.0 2017 April 18
+- Updated base files
 
 ## v2.3.0 2014 January 10
 - Repackaged
