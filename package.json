@@ -89,7 +89,7 @@
   ],
   "main": "es5/handlebars.plugin.js",
   "dependencies": {
-    "handlebars": "~1.3.0"
+    "handlebars": "~4.0.6"
   },
   "devDependencies": {
     "coffee-script": "^1.12.5",
