@@ -1,5 +1,10 @@
 # History
 
+## v2.5.0 2018 June 26
+- Plugin configuration is now set internally via `setConfig`, which has been the convention since DocPad v6.24.0+
+- Now compiled with CoffeeScript v2
+- Updated base files
+
 ## v2.4.0 2017 April 18
 - Updated base files
 
