@@ -11,6 +11,8 @@ module.exports = (BasePlugin) ->
 
 		# Constructor
 		setConfig: (config) ->
+			# Super
+			super(config)
 			# Prepare
 			docpad = @docpad
 			handlebars = @handlebars = require('handlebars')
@@ -26,9 +28,6 @@ module.exports = (BasePlugin) ->
 			if @config.partials
 				for own name,partial of @config.partials
 					handlebars.registerPartial(name, partial)
-
-			# Chain
-			super(config)
 
 		# Render some content
 		render: (opts) ->
