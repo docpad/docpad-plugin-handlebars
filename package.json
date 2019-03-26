@@ -110,7 +110,7 @@
     "projectz": "^1.4.0"
   },
   "peerDependencies": {
-    "docpad": "^6.24"
+    "docpad": "^6.82.0"
   },
   "scripts": {
     "our:setup": "npm run our:setup:npm && npm run our:setup:docpad",
