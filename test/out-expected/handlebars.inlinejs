@@ -1,14 +1,15 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['handlebars'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+templates['handlebars'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    };
 
-
-  buffer += "<h1>"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.document)),stack1 == null || stack1 === false ? stack1 : stack1.example)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+  return "<h1>"
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"document") : depth0)) != null ? lookupProperty(stack1,"example") : stack1), depth0))
     + "</h1>";
-  return buffer;
-  });
+},"useData":true});
 })();
