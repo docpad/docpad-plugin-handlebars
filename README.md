@@ -1,4 +1,4 @@
-# Handlebars Plugin for [DocPad](https://docpad.org)
+# Handlebars Plugin for [DocPad](https://docpad.bevry.me/)
 
 <!-- BADGES/ -->
 
@@ -21,7 +21,7 @@
 <!-- /BADGES -->
 
 
-Adds support for the [Handlebars](http://handlebarsjs.com/) templating engine to [DocPad](https://docpad.org)
+Adds support for the [Handlebars](http://handlebarsjs.com/) templating engine to [DocPad](https://docpad.bevry.me/)
 
 Convention:  `.(inlinejs|js|anything).(handlebars|hbs|hb)`
 
@@ -33,7 +33,7 @@ Convention:  `.(inlinejs|js|anything).(handlebars|hbs|hb)`
 
 ### Getting helpers and partials to work
 
-For the plugin to support helpers and partials, you'll have to add something like the following to your [docpad configuration file](http://docpad.org/docs/config) manually:
+For the plugin to support helpers and partials, you'll have to add something like the following to your [docpad configuration file](https://docpad.bevry.me/core/config) manually:
 
 ``` coffee
 # ...
